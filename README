@@ -1,0 +1,34 @@
+# Kyle Matsumoto
+# kytmatsu
+# CMPS101 Spring 2015
+# 8/5/15
+# pa02
+
+The purpose of this assignment is to transpose a graph and print it, and then print a node that could be in the cycle of the graph that was transposed.
+
+I am submitting README graph02.c intList.h intList.c Makefile gr02_test0.in test1.in test2.in test3.in and test4.in.
+
+graph02.c contains all the added functionality of pa02 to pa01. It defines all the main functions of the program and runs the program when used with make.
+
+intList.c gives us our ADT functions.
+
+intList.h is a header file that we didnt change.
+
+To use the makefile you type in: 
+make graph02
+
+to start the test program use:
+graph02 *filename*
+
+I added the transposeGraph, hasCycle, and hasCycleLen features to my pa01 assignment to create pa02.
+the transposeGraph function transposes the graph.
+Hascycle uses a depth first search and recursion to go through the nodes.
+
+gr02_test0.in is just a general test case that showcases a cycle.
+test1.in showcases an instance of no cycle.
+test2.in also showcases an instance of no cycle, however, it also is given a number higher than the list and skips it and moves on.
+test3.in shows what happens when you have a function(7 7) that points to itself.
+test4.in has two nodes that point to each other(1 2 & 2 1).
+
+I observed that in the regular file, every other transpose would be the same. In other words the original graph and graph 3 are the same as are graph 2 and graph 4.
+I observed this throughout the rest of the files no matter is they had a cycle or not. The only thing that changed was the the cycle, this would most likely be because of a change in order of the nodes due to the transpose which transposed them back into the same graph, just slightly out of order.
